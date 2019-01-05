@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: panel
+---
+testFramework: spock
+sourceLanguage: groovy
