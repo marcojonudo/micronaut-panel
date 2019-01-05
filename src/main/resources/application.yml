@@ -1,3 +1,28 @@
 micronaut:
     application:
         name: panel
+    server:
+        port: 8081
+        cors:
+            enabled: true
+
+hibernate:
+    hbm2ddl:
+        auto: 'update'
+
+#environments:
+#    development:
+dataSource:
+    dbCreate: validate
+    driverClassName: com.mysql.jdbc.Driver
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    url: jdbc:mysql://localhost:3306/cubo
+    username: root
+    password: root
+
+#    dataSources:
+#        default:
+#            url: jdbc:mysql://localhost:3306/cubo
+#            username: root
+#            password: root
+#            driverClassName: ${JDBC_DRIVER}
