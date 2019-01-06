@@ -40,6 +40,10 @@ dependencies {
     compile "io.micronaut.configuration:micronaut-hibernate-gorm"
     compile "io.micronaut.configuration:micronaut-jdbc-tomcat"
     runtime group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+
+    runtime "io.micronaut.configuration:micronaut-multitenancy-gorm"
+
+    runtime "com.h2database:h2:1.4.192"
 }
 
 shadowJar {

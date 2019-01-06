@@ -20,11 +20,10 @@ class PanelController {
 	}
 
 	@Get("/hello")
-	String hello() {
-		Configuration configuration2 = configurationDataService.findByClave("planning.types")
-//		Configuration configuration = configurationDataService.findByClave("planning.types")
+	Configuration hello() {
+		Configuration configuration = configurationDataService.findByClave("planning.types")
 
-		return "hola"
+		return configuration
 	}
 
 }

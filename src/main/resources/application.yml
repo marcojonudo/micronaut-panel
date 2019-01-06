@@ -10,19 +10,31 @@ hibernate:
     hbm2ddl:
         auto: 'update'
 
-#environments:
-#    development:
-dataSource:
-    dbCreate: validate
-    driverClassName: com.mysql.jdbc.Driver
-    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-    url: jdbc:mysql://localhost:3306/cubo
-    username: root
-    password: root
+grails:
+    gorm:
+        multiTenancy:
+            mode: DATABASE
+            tenantResolverClass: 'io.micronaut.multitenancy.gorm.HttpHeaderTenantResolver'
 
-#    dataSources:
-#        default:
-#            url: jdbc:mysql://localhost:3306/cubo
-#            username: root
-#            password: root
-#            driverClassName: ${JDBC_DRIVER}
+dataSources:
+    default:
+        dbCreate: validate
+        driverClassName: com.mysql.jdbc.Driver
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        url: jdbc:mysql://localhost:3306/cubo
+        username: root
+        password: root
+    cubo:
+        dbCreate: validate
+        driverClassName: com.mysql.jdbc.Driver
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        url: jdbc:mysql://localhost:3306/cubo
+        username: root
+        password: root
+    cubo2:
+        dbCreate: validate
+        driverClassName: com.mysql.jdbc.Driver
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        url: jdbc:mysql://localhost:3306/cubo2
+        username: root
+        password: root

@@ -1,10 +1,10 @@
 package panel.services.data
 
+import grails.gorm.multitenancy.CurrentTenant
 import grails.gorm.services.Service
 import panel.domains.Configuration
-import javax.inject.Singleton
 
-@Singleton
+@CurrentTenant
 @Service(Configuration)
 interface ConfigurationDataService {
 
