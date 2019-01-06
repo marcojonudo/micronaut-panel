@@ -4,6 +4,7 @@ import groovy.transform.CompileStatic
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import panel.domains.Configuration
+import panel.services.PanelService
 import panel.services.data.ConfigurationDataService
 
 import javax.inject.Inject
@@ -13,17 +14,20 @@ import javax.inject.Inject
 class PanelController {
 
 	private final ConfigurationDataService configurationDataService
+	private final PanelService panelService
 
 	@Inject
-	PanelController(ConfigurationDataService configurationDataService) {
+	PanelController(ConfigurationDataService configurationDataService, PanelService panelService) {
 		this.configurationDataService = configurationDataService
+		this.panelService = panelService
 	}
 
 	@Get("/hello")
 	Configuration hello() {
-		Configuration configuration = configurationDataService.findByClave("planning.types")
+//		Configuration configuration = configurationDataService.findByClave("planning.types")
+		panelService.test()
 
-		return configuration
+		return null
 	}
 
 }

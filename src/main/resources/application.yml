@@ -24,17 +24,10 @@ dataSources:
         url: jdbc:mysql://localhost:3306/cubo
         username: root
         password: root
-    cubo:
-        dbCreate: validate
-        driverClassName: com.mysql.jdbc.Driver
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-        url: jdbc:mysql://localhost:3306/cubo
-        username: root
-        password: root
-    cubo2:
-        dbCreate: validate
-        driverClassName: com.mysql.jdbc.Driver
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-        url: jdbc:mysql://localhost:3306/cubo2
-        username: root
-        password: root
+#    cubo2:
+#        dbCreate: validate
+#        driverClassName: com.mysql.jdbc.Driver
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#        url: jdbc:mysql://localhost:3306/cubo2
+#        username: root
+#        password: root
